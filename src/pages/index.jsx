@@ -15,12 +15,9 @@ export default function Home() {
     <>
       <Head>
         <title>zkLeap - Find your next job, privately.</title>
-        <meta
-          name="description"
-          content="Find your next job, privately"
-        />
+        <meta name="description" content="Find your next job, privately" />
       </Head>
-      <Header />
+      <Header skipProfile />
       <main>
         <Hero />
         <PrimaryFeatures />

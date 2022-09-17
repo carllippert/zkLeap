@@ -36,7 +36,7 @@ export default function BadgeGrid() {
               </dd>
             </dl>
           </div>
-          <div>
+          {/* <div>
             <div className="-mt-px flex divide-x divide-gray-200">
               <div className="flex w-0 flex-1">
                 <a
@@ -57,7 +57,7 @@ export default function BadgeGrid() {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </li>
       ))}
     </ul>

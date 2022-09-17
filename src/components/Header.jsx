@@ -90,7 +90,7 @@ function MobileNavigation() {
   )
 }
 
-export function Header({ dontShowGetStarted }) {
+export function Header({ dontShowGetStarted, skipProfile }) {
   const { address } = useAccount()
 
   return (
@@ -112,9 +112,11 @@ export function Header({ dontShowGetStarted }) {
               <RainbowConnectButton />
             </div>
             <div>
-              <Link href={`/profile/${address}`}>
-                <Button>My Profile</Button>
-              </Link>
+              {skipProfile ? null : (
+                <Link href={`/profile/${address}`}>
+                  <Button>My Profile</Button>
+                </Link>
+              )}
             </div>
             {dontShowGetStarted ? null : (
               <Button
