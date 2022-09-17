@@ -7,6 +7,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import RainbowConnectButton from './RainbowConnectButton'
 
 function MobileNavLink({ href, children }) {
   return (
@@ -89,7 +90,7 @@ function MobileNavigation() {
   )
 }
 
-export function Header() {
+export function Header({ dontShowGetStarted }) {
   return (
     <header className="py-10">
       <Container>
@@ -106,16 +107,19 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
+             <RainbowConnectButton />
             </div>
-            <Button
-              href="/register"
-              className="bg-gradient-to-br from-purple-400 to-blue-600"
-            >
-              <span>
-                Get started <span className="hidden lg:inline">today</span>
-              </span>
-            </Button>
+            {dontShowGetStarted ? null : (
+              <Button
+                href="/register"
+                className="bg-gradient-to-br from-purple-400 to-blue-600"
+              >
+                <span>
+                  Get started <span className="hidden lg:inline">today</span>
+                </span>
+              </Button>
+            )}
+
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>

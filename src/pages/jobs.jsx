@@ -19,7 +19,7 @@ export default function Home() {
         <title>zkLeap - Find your next job, privately.</title>
         <meta name="description" content="Find your next job, privately" />
       </Head>
-      <Header />
+      <Header dontShowGetStarted/>
       <main>
         <Container className="pb-12 text-center">
           <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
