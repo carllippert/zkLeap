@@ -28,13 +28,13 @@ const wagmiClient = createClient({
 export default function App({ Component, pageProps }) {
   return (
     <WagmiConfig client={wagmiClient}>
-      <SessionProvider refetchInterval={0} session={pageProps.session}>
-        <RainbowKitSiweNextAuthProvider>
-          <RainbowKitProvider chains={chains}>
+      {/* <SessionProvider refetchInterval={0} session={pageProps.session}>
+        <RainbowKitSiweNextAuthProvider> */}
+          <RainbowKitProvider coolMode chains={chains}>
             <Component {...pageProps} />
           </RainbowKitProvider>
-        </RainbowKitSiweNextAuthProvider>
-      </SessionProvider>
+        {/* </RainbowKitSiweNextAuthProvider>
+      </SessionProvider> */}
     </WagmiConfig>
   )
 }

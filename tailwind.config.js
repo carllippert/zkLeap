@@ -25,12 +25,12 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        display: ['Lexend', ...defaultTheme.fontFamily.sans],
+        display: ['Lexend', ...defaultTheme.fontFamily.sans], 
       },
       maxWidth: {
         '2xl': '40rem',
-      },
+      }, 
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require("daisyui"), require('@tailwindcss/forms')],
 }

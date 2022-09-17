@@ -20,7 +20,7 @@ export default function Login() {
           <div className="mt-20">
             <h2 className="text-lg font-semibold text-gray-900">
               Sign in to your account
-            </h2>
+            </h2> 
             <p className="mt-2 text-sm text-gray-700">
               Don’t have an account?{' '}
               <Link

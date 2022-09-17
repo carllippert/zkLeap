@@ -1,16 +1,21 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
+import {
+  useConnectModal
+} from '@rainbow-me/rainbowkit';
+
 import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
 import { SelectField, TextField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
+import CreateProfileSteps from '@/components/CreateProfileSteps'
 
 export default function Register() {
   return (
-    <>
+    <div className="min-h-full">
       <Head>
-        <title>Sign Up - TaxPal</title>
+        <title>Sign Up</title>
       </Head>
       <AuthLayout>
         <div className="flex flex-col">
@@ -33,8 +38,11 @@ export default function Register() {
             </p>
           </div>
         </div>
-        <form
-          action="#"
+        <div className="mt-20 mb-10 grid grid-cols-1 gap-y-8 gap-x-6 sm:grid-cols-1">
+          <CreateProfileSteps />
+        </div>
+        {/* <form
+          action="#" 
           className="mt-10 grid grid-cols-1 gap-y-8 gap-x-6 sm:grid-cols-2"
         >
           <TextField
@@ -94,8 +102,8 @@ export default function Register() {
               </span>
             </Button>
           </div>
-        </form>
+        </form> */}
       </AuthLayout>
-    </>
+    </div>
   )
 }

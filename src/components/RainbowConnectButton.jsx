@@ -1,5 +1,7 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
-export const YourApp = () => {
-  return <ConnectButton />;
-};
+const RainbowConnectButton = ({disabled}) => {
+  return <ConnectButton disabled={disabled} />
+}
+
+export default RainbowConnectButton
