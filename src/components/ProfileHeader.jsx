@@ -17,7 +17,7 @@ export default function ProfileHeader() {
           className="mask mask-hexagon-2"
         />
       </div>
-      <div className="m1-5 mt-5 flex-1 font-black text-black">
+      <div className="m1-5 mt-5 flex-1 font-bold text-black">
         <div className="text-xl">
           Name:{' '}
           <span
@@ -30,7 +30,7 @@ export default function ProfileHeader() {
             }}
             className="text-xl"
           >
-            John Doe Jane Doe
+            Carl Chissu Kofi
           </span>
         </div>
         <div>
@@ -58,7 +58,7 @@ export default function ProfileHeader() {
               borderRadius: '0.5rem',
             }}
           >
-            Other None Yours
+            Them They Me
           </span>
         </div>
         <div>
@@ -72,16 +72,25 @@ export default function ProfileHeader() {
               borderRadius: '0.5rem',
             }}
           >
-            All White Black Brown
+            All All All All
           </span>
         </div>
       </div>
-      <div className="m1-5 align-right mt-20 flex-1 text-lg text-indigo-600 underline">
-        {address ? (
-          <Link href={`https://polygonscan.com/address/${address}`}>
-            <a target="_blank">Polygonscan</a>
-          </Link>
-        ) : null}
+      <div className="m1-5 align-right mt-10 flex-1 text-lg text-indigo-500 underline">
+        <div>
+          {address ? (
+            <Link href={`https://polygonscan.com/address/${address}`}>
+              <a target="_blank">View on Polygonscan</a>
+            </Link>
+          ) : null}
+        </div>
+        <div className="m1-5 align-right flex-1 text-lg text-indigo-500 underline">
+          {address ? (
+            <Link href={`https://polygonscan.com/address/${address}`}>
+              <a target="_blank">View on Opensea</a>
+            </Link>
+          ) : null}
+        </div>
       </div>
     </div>
   )
