@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
-
+import { useAccount } from 'wagmi'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
@@ -91,6 +91,8 @@ function MobileNavigation() {
 }
 
 export function Header({ dontShowGetStarted }) {
+  const { address } = useAccount()
+
   return (
     <header className="py-10">
       <Container>
@@ -107,7 +109,12 @@ export function Header({ dontShowGetStarted }) {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-             <RainbowConnectButton />
+              <RainbowConnectButton />
+            </div>
+            <div>
+              <Link href={`/profile/${address}`}>
+                <Button>My Profile</Button>
+              </Link>
             </div>
             {dontShowGetStarted ? null : (
               <Button

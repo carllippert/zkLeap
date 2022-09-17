@@ -21,9 +21,9 @@ export function Footer() {
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
             <Link
-              href="https://twitter.com"
+              href="https://twitter.com/carllippert"
               className="group"
-              aria-label="TaxPal on Twitter"
+              aria-label="zkLeap on twitter"
             >
               <svg
                 aria-hidden="true"
@@ -33,9 +33,9 @@ export function Footer() {
               </svg>
             </Link>
             <Link
-              href="https://github.com"
+              href="https://github.com/carllippert/zkLeap"
               className="group"
-              aria-label="TaxPal on GitHub"
+              aria-label="zkLeap on GitHub"
             >
               <svg
                 aria-hidden="true"
@@ -46,7 +46,7 @@ export function Footer() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} TaxPal. All rights
+            Copyright &copy; {new Date().getFullYear()} zkLeap. All rights
             reserved.
           </p>
         </div>
