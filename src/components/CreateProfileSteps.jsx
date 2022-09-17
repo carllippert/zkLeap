@@ -19,17 +19,17 @@ export default function CreateProfileSteps() {
       status: 'current',
     },
     {
-      name: 'Sign in with your new account',
-      description: 'This is how we get to know you',
-      href: '#',
-      status: 'upcoming',
-    },
-    {
       name: 'Mint Private Badge',
       description: 'Show off your skills in private',
       href: '#',
       status: 'upcoming',
     },
+    // {
+    //   name: 'Sign in with your new account',
+    //   description: 'This is how we get to know you',
+    //   href: '#',
+    //   status: 'upcoming',
+    // },
   ])
 
   const advanceStep = (index) => {

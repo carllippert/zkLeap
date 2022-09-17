@@ -1,13 +1,12 @@
 import 'focus-visible'
-import '@/styles/tailwind.css'
+import '../styles/tailwind.css'
 import '@rainbow-me/rainbowkit/styles.css'
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit'
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
 // import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
-import { RainbowKitSiweNextAuthProvider } from '@rainbow-me/rainbowkit-siwe-next-auth'
-import { SessionProvider } from 'next-auth/react';
-
+// import { RainbowKitSiweNextAuthProvider } from '@rainbow-me/rainbowkit-siwe-next-auth'
+// import { SessionProvider } from 'next-auth/react';
 
 const { chains, provider } = configureChains(
   [chain.polygon, chain.optimism, chain.arbitrum],
@@ -30,10 +29,10 @@ export default function App({ Component, pageProps }) {
     <WagmiConfig client={wagmiClient}>
       {/* <SessionProvider refetchInterval={0} session={pageProps.session}>
         <RainbowKitSiweNextAuthProvider> */}
-          <RainbowKitProvider coolMode chains={chains}>
-            <Component {...pageProps} />
-          </RainbowKitProvider>
-        {/* </RainbowKitSiweNextAuthProvider>
+      <RainbowKitProvider coolMode chains={chains}>
+        <Component {...pageProps} />
+      </RainbowKitProvider>
+      {/* </RainbowKitSiweNextAuthProvider>
       </SessionProvider> */}
     </WagmiConfig>
   )
