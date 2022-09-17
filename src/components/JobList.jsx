@@ -25,8 +25,8 @@ export default function Jobs() {
   return (
     <div className="mx-auto mt-20 mb-20 min-h-full max-w-5xl overflow-hidden bg-white shadow sm:rounded-md">
       <ul role="list" className="divide-y divide-gray-200">
-        {jobs.map((item) => {
-          return <JobItem job={item} />
+        {jobs.map((item, index) => {
+          return <JobItem job={item} key={index} />
         })}
       </ul>
     </div>
