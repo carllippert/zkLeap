@@ -31,9 +31,9 @@ export function Hero() {
         {/* privately. */}
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        Your looking for a new job but you can't let your boss know. We get it.
+        {`Your looking for a new job but you can't let your boss know. We get it.
         Take the the first step towards your next job without revealing anything
-        but your skills.
+        but your skills.`}
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <Button href="/register">Find Job Privately</Button>
