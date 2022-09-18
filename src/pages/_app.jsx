@@ -6,8 +6,14 @@ import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
 import { publicProvider } from 'wagmi/providers/public'
 import { UserContextProvider } from '@/components/UserContext'
 
+const the_chain = {
+  ...chain.localhost,
+  id: 31337,
+  name: '0xBerlin Local',
+}
+
 const { chains, provider } = configureChains(
-  [chain.localhost, chain.polygon, chain.optimism, chain.arbitrum],
+  [the_chain, chain.localhost, chain.polygon, chain.optimism, chain.arbitrum],
   [publicProvider()]
 )
 
