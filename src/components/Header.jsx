@@ -120,7 +120,7 @@ export function Header({ dontShowGetStarted, skipProfile }) {
             </div>
             {dontShowGetStarted ? null : (
               <Button
-                href="/register"
+                href={`/profile/${address}`}
                 className="bg-gradient-to-br from-blue-400 to-green-400"
               >
                 <span>

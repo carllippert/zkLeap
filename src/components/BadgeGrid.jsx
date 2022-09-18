@@ -16,6 +16,7 @@ const init_badges = [
     title: 'Your a complete OG buildoor',
     imageUrl: yoda,
     comingSoon: false,
+    claimed: false,
   },
   {
     name: 'Psychic',
@@ -50,7 +51,7 @@ export default function BadgeGrid() {
 
   //sismo contract polygon
   const { data, isError, isLoading } = useContractRead({
-    addressOrName: '0x71a7089C56DFf528f330Bc0116C0917cd05B51Fc',
+    addressOrName: '0xeF5b2Be9a6075a61bCA4384abc375485d5e196c3',
     contractInterface: abi,
     functionName: 'balanceOf',
     args: [address, badge_id],
@@ -69,6 +70,11 @@ export default function BadgeGrid() {
     // fetchBadgeBalance()
     console.log('Data ?=> ')
     console.log(data)
+    let new_grid = [...badges]
+
+    new_grid[0].claimed = true
+
+    setBadges(new_grid)
   }, [data])
 
   return (
@@ -101,11 +107,15 @@ export default function BadgeGrid() {
                   </span>
                 ) : (
                   <div>
-                    <Link href="http://localhost:3000/snapshot-gitcoindao-voters">
-                      <Button>Mint zkBadge</Button>
-                    </Link>
+                    {/* {badge.claimed ? (
+                      <Button className="bg-indigo-700">Proved!</Button>
+                    ) : ( */}
+                      <Link href="http://localhost:3000/yoda">
+                        <Button>Mint zkBadge</Button>
+                      </Link>
+                    {/* )} */}
                   </div>
-                )}
+                )}``
               </dd>
             </dl>
           </div>
