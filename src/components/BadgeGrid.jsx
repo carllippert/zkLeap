@@ -47,6 +47,8 @@ const init_badges = [
 export default function BadgeGrid() {
   const [badges, setBadges] = useState(init_badges)
   const { address } = useAccount()
+  const [minted, setMinted] = useState(false); 
+
   const badge_id = '10000005'
 
   //sismo contract polygon
@@ -107,13 +109,13 @@ export default function BadgeGrid() {
                   </span>
                 ) : (
                   <div>
-                    {/* {badge.claimed ? (
+                    {(badge.claimed && minted) ? (
                       <Button className="bg-indigo-700">Proved!</Button>
-                    ) : ( */}
+                    ) : ( 
                       <Link href="http://localhost:3000/yoda">
                         <Button>Mint zkBadge</Button>
                       </Link>
-                    {/* )} */}
+                    )} 
                   </div>
                 )}``
               </dd>
