@@ -7,7 +7,7 @@ export default function ProfileHeader() {
   const { address } = useAccount()
 
   return (
-    <div className="container mx-auto mb-10 flex shadow-sm sm:px-6 lg:px-8">
+    <div className="container mx-auto mb-10 mt-10 flex shadow-md sm:px-6 lg:px-8">
       <div className="flex-1">
         <Image
           height="150"
