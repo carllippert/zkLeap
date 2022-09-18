@@ -20,12 +20,12 @@ export default function Home() {
       <Header skipProfile />
       <main>
         <Hero />
-        <PrimaryFeatures />
+        {/* <PrimaryFeatures />
         <SecondaryFeatures />
         <CallToAction />
         <Testimonials />
         <Pricing />
-        <Faqs />
+        <Faqs /> */}
       </main>
       <Footer />
     </>

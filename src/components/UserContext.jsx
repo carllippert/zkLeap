@@ -4,7 +4,7 @@ const UserContext = createContext({
   isUser: false,
 })
 
-export const UserContextProvider = () => {
+export const UserContextProvider = ({ children }) => {
   const [isUser, setIsUser] = useState(false)
 
   const value = {
@@ -12,7 +12,7 @@ export const UserContextProvider = () => {
     setIsUser,
   }
 
-  return <UserContext.Provider value={value} />
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }
 
 export const useUser = () => {

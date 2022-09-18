@@ -121,7 +121,7 @@ export function Header({ dontShowGetStarted, skipProfile }) {
             {dontShowGetStarted ? null : (
               <Button
                 href="/register"
-                className="bg-gradient-to-br from-purple-400 to-blue-600"
+                className="bg-gradient-to-br from-blue-400 to-green-400"
               >
                 <span>
                   Get started <span className="hidden lg:inline">today</span>

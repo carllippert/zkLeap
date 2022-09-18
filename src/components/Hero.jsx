@@ -14,7 +14,7 @@ export function Hero() {
     <Container className="pt-20 pb-16 text-center lg:pt-32">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         Find your next job{' '}
-        <span className="bg-gradient-to-br from-purple-400 to-blue-600 bg-clip-text font-extrabold text-transparent">
+        <span className="bg-gradient-to-br from-blue-500 to-green-400 bg-clip-text font-extrabold text-transparent">
           privately.
         </span>
         {/* <span className="relative whitespace-nowrap text-blue-600">
@@ -48,7 +48,7 @@ export function Hero() {
             <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
           </svg>
           <span className="ml-3">Watch video</span> */}
-            <svg
+          <svg
             aria-hidden="true"
             className="h-3 w-3 flex-none fill-blue-600 group-active:fill-current"
           >
@@ -57,7 +57,8 @@ export function Hero() {
           <span className="ml-3">How it works</span>
         </Button>
       </div>
-      <div className="mt-36 lg:mt-44">
+      <div className="mt-36"></div>
+      {/* <div className="mt-36 lg:mt-44">
         <p className="font-display text-base text-slate-900">
           Trusted by these six companies so far
         </p>
@@ -91,7 +92,7 @@ export function Hero() {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </Container>
   )
 }

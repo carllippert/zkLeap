@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import zkLeapLogo from '../images/logos/zkleap.png'
+import zkLeapLogo from '../images/logos/zk/zk_logo_gradient.svg'
 
 export function Logo(props) {
   return (
