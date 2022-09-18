@@ -13,7 +13,7 @@ import Link from 'next/link'
 const init_badges = [
   {
     name: 'Yoda',
-    title: 'Top 1000 txn volume 2013 - 2020',
+    title: 'Your a complete OG buildoor',
     imageUrl: yoda,
     comingSoon: false,
   },
@@ -101,7 +101,7 @@ export default function BadgeGrid() {
                   </span>
                 ) : (
                   <div>
-                    <Link href="https://playground.sismo.io/mint?collectionIds=[30000001]&goBackPath=success">
+                    <Link href="http://localhost:3000/snapshot-gitcoindao-voters">
                       <Button>Mint zkBadge</Button>
                     </Link>
                   </div>

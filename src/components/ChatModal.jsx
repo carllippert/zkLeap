@@ -41,7 +41,7 @@ export default function Modal({ company }) {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all ">
-                <Chat />
+                <Chat company={company}/>
                 {/* <div>
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
                     <CheckIcon

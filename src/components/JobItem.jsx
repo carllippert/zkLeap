@@ -25,7 +25,7 @@ export default function JobItem({ job }) {
             Start Private Chat
           </Button>
         ) : null}
-        {showModal ? <ChatModal company="derp" /> : null}
+        {showModal ? <ChatModal company={job.company.fields['company']} /> : null}
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
