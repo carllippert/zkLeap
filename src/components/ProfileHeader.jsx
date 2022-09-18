@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useAccount } from 'wagmi'
 
 export default function ProfileHeader() {
-  const { address } = useAccount()
+  const { address } = useAccount() 
 
   return (
     <div className="container mx-auto mb-10 mt-10 flex shadow-md sm:px-6 lg:px-8">
@@ -78,18 +78,14 @@ export default function ProfileHeader() {
       </div>
       <div className="m1-5 align-right mt-10 flex-1 text-lg text-indigo-500 underline">
         <div>
-          {address ? (
-            <Link href={`https://polygonscan.com/address/${address}`}>
-              <a target="_blank">View on Polygonscan</a>
-            </Link>
-          ) : null}
+          <Link href={`https://polygonscan.com/address/${address}`}>
+            <a target="_blank">View on Polygonscan</a>
+          </Link>
         </div>
         <div className="m1-5 align-right flex-1 text-lg text-indigo-500 underline">
-          {address ? (
-            <Link href={`https://polygonscan.com/address/${address}`}>
-              <a target="_blank">View on Opensea</a>
-            </Link>
-          ) : null}
+          <Link href={`https://testnets.opensea.io/${address}`}>
+            <a target="_blank">View on Opensea</a>
+          </Link>
         </div>
       </div>
     </div>

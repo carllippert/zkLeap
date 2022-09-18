@@ -102,7 +102,7 @@ export default function BadgeGrid() {
                 ) : (
                   <div>
                     <Link href="https://playground.sismo.io/mint?collectionIds=[30000001]&goBackPath=success">
-                      <Button>Mint</Button>
+                      <Button>Mint zkBadge</Button>
                     </Link>
                   </div>
                 )}
